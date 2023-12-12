@@ -16,7 +16,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import com.mycompany.outlinernb.View.OutlinerViewer;
+import com.mycompany.outliner.View.OutlinerViewer;
 
 /**
  *

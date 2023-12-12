@@ -75,16 +75,11 @@ public class OutlinerViewer extends JFrame {
         this.DelSubsection = DelSubsection;
     }
   
-    /**
-     * The Singleton instance of the TaskManagerViewer - there is only one in the Application
-     */
+    
     public static OutlinerViewer instance;
    
-    /**
-     * Gets the Singleton Instance of the TaskManagerViewer 
-     * If it doesn't exist it is created 
-     * @return TaskManagerViewer 
-     */
+
+   
     public static OutlinerViewer  getInstance(){
         if (instance == null){
             instance = new OutlinerViewer ();
@@ -92,15 +87,11 @@ public class OutlinerViewer extends JFrame {
         return instance;
     }
     
-    /**
-     * The private Constructor of the TaskManagerViewer
-     * Sets up its size, a BorderLayout and adds its Components
-     * 
-     */
+   
+  
     private OutlinerViewer (){
         this.setSize(400, 500);
         this.setLayout(new BorderLayout());
-     // displayText.addActionListener(this);
         var buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(AddSection);
         buttonPanel.add(AddSubsection);
