@@ -56,7 +56,7 @@ public class Section {
         this.userId = userId;
     }
 
-    public List<Subsection> getSubSection() {
+    public List<Subsection> getSubSections() {
         return subSections;
     }
 

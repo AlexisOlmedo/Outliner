@@ -64,7 +64,7 @@ public class Outliner1 {
             for (Section s : u.getSection()){
                     sb.append(s.toString());
                     sb.append(System.lineSeparator());
-                    for (Subsection Ss : s.getSubSection()){
+                    for (Subsection Ss : s.getSubSections()){
                         sb.append(Ss.toString());
                         sb.append(System.lineSeparator());
                     }
@@ -84,10 +84,10 @@ public class Outliner1 {
         
     }
   
-    public void assignStoredSubTasks(){
+    public void assignStoredSubsection(){
      
         for(Subsection Ss: subSections){
-            Section s = this.getSection(s.getSectionId());
+            Section s = this.getSection(Ss. getSectionID());
             s.addSubsection(Ss);
         }
         
@@ -108,12 +108,12 @@ public class Outliner1 {
     }
 
    
-    public void setTasks(List<Section> sections) {
+    public void setSection(List<Section> sections) {
         this.sections = sections;
     }
     
   
-    public boolean addTask(Section section){
+    public boolean addSection(Section section){
         return sections.add(section);
     }
 
@@ -122,7 +122,7 @@ public class Outliner1 {
          return users.add(user);
     }
  
-    public boolean addSubTask(Subsection subSection){
+    public boolean addSubsection(Subsection subSection){
          return subSections.add(subSection);
     }
     
@@ -155,7 +155,7 @@ public class Outliner1 {
        
    
     
-    public boolean removeTask(Section section){
+    public boolean removeSection(Section section){
            return sections.remove(section);
        }
        
@@ -165,7 +165,7 @@ public class Outliner1 {
       }
     
   
-    public boolean removeSubTask(Subsection subSection){
+    public boolean removeSubsection(Subsection subSection){
           return subSections.remove(subSection);
       }
       
@@ -175,7 +175,7 @@ public class Outliner1 {
          
           switch(property){
               case "name" -> value = user.getName();
-                  
+              
               case "id" -> value = user.getId();
                   
                   
@@ -342,7 +342,7 @@ public class Outliner1 {
           while(in.ready()){
               String csvLine = in.readLine();
               Subsection subSection = new Subsection(csvLine);
-              this.addSubsection(subSection);
+              this.addSubSections(SubSection);
           }
           
           in.close();
@@ -418,7 +418,7 @@ public class Outliner1 {
             for (Section s : u.getSection()){
                     sb.append(s.toString());
                     sb.append(System.lineSeparator());
-                    for (Subsection Ss : s.getSubsection()){
+                    for (Subsection Ss : s.getSubSections()){
                         sb.append(Ss.toString());
                         sb.append(System.lineSeparator());
                     }
